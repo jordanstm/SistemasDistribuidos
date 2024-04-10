@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Button} from 'react'
 function App() {
   return (
     <div className="App">
@@ -9,14 +9,17 @@ function App() {
         <p>
           Sistemas Distribuidos 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className='login'>
+            <label className='lbllogin'>Login</label>
+            <p>Usuario</p>
+            <input className='usuario'></input>
+            <p>Senha</p>
+            <input className='senha' type='password'></input>
+           <button className='btnLogar' >Logar</button>
+           <buton className='logingoogle'>Logar com conta google</buton>
+           <p>ou Cadastre-se <button>Aqui</button></p>
+          
+        </div>
       </header>
     </div>
   );

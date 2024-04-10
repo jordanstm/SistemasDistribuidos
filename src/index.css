@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login{
+   
+    height: 40vw;
+    width: 35%;
+    border: solid 2px #fff;
+    margin-top: 2%;
+    border-radius: 10%;
+     font-size: small;
+}
+.lbllogin{
+  font-size:  x-large;
+}
+.senha{
+  margin-bottom: 2vw;
+}
