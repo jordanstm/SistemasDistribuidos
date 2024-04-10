@@ -1,7 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import {Button} from 'react'
+import {useState} from 'react'
+ import {Navigate} from 'react-router-dom'
 function App() {
+  const[usuario,Setusuario] = useState();
+  const[senha,SetSenha] = useState();
+  const[Validou,SetValidou]= useState(false);
+  function Realizalogin(usuario, senha){
+     //Função para testar o Login
+    if(usuario === 'Caio' && senha ==='123'){
+      // navega para pagina principal
+       SetValidou(true);
+      
+  
+    }
+    else{
+      if( Validou === false )
+      alert('Usuario ou senha Invalidos!')
+    }
+
+  }
+   
   return (
     <div className="App">
       <header className="App-header">
@@ -12,12 +31,13 @@ function App() {
         <div className='login'>
             <label className='lbllogin'>Login</label>
             <p>Usuario</p>
-            <input className='usuario'></input>
+            <input className='usuario' onChange={(e)=>{Setusuario(e.target.value)}}></input>
             <p>Senha</p>
-            <input className='senha' type='password'></input>
-           <button className='btnLogar' >Logar</button>
+            <input className='senha' type='password' onChange={(e)=>{SetSenha(e.target.value)}}></input>
+           <button className='btnLogar' onClick={()=>{ Realizalogin(usuario,senha)}}>Logar</button>
            <buton className='logingoogle'>Logar com conta google</buton>
            <p>ou Cadastre-se <button>Aqui</button></p>
+           { Validou && (<Navigate to='/Principal' />) }
           
         </div>
       </header>
