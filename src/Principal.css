@@ -14,6 +14,7 @@
     background-color: #494646;
     min-width: 98vw;
     border-radius: 30PX;
+    justify-content: left;
   }
   .img{
     height: 40vmin;
