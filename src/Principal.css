@@ -32,6 +32,6 @@
   .texto{
     font-size:small;
   }
-   .container :hover{
+   .container:hover{
     border: solid 1px #7bf1b0;
    }
