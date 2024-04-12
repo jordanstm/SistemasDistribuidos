@@ -15,3 +15,9 @@
     min-width: 98vw;
     border-radius: 30PX;
   }
+  .img{
+    height: 40vmin;
+  }
+  .titulo{
+    font-size: medium;
+  }
