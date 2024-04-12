@@ -1,0 +1,17 @@
+.App {
+ 
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+  .geral{
+    margin-top: 0;
+  }
+  .container{
+    background-color: #494646;
+    min-width: 98vw;
+    border-radius: 30PX;
+  }

@@ -12,27 +12,3 @@ code {
     monospace;
 }
 
-.login{
-   
-    height: 40vw;
-    width: 40%;
-    border: solid 2px #fff;
-    margin-top: 2%;
-    border-radius: 10%;
-     font-size: small;
-     
-}
-.lbllogin{
-  font-size:  x-large;
-  margin-top: 10vw;
-}
-.senha{
-  margin-bottom: 2vw;
-  font-size: large;
-  width: 90%;
-  
-}
-.usuario{
-  font-size: large;
-  width: 90%;
-}
