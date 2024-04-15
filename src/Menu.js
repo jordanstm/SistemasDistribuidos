@@ -23,7 +23,7 @@ function Menu({total}){
                     <a href="\">Login</a>                 
                     
                       <div className='containerCard'>
-                       <div className='Total'>{total=3}</div>    
+                       <div className='Total'>{total=6}</div>    
                       <img className='ima' src={shop} onClick={()=>{SetListar(true)}} alt='CarShop'></img>
                       </div>
                        

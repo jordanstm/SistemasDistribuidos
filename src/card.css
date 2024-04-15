@@ -1,0 +1,10 @@
+.cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.imgc{
+     max-width: 20vw;
+     border-radius: 50px;
+     height: 200px;
+}
