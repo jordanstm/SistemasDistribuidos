@@ -1,34 +1,32 @@
 import "./Principal.css"
-import cftv1 from  './Imagens/CFTV2.jpg'
-import cftv2 from  './Imagens/CFTV3.jpg'
-import cftv4 from  './Imagens/CFTV4.jpg'
-import cftv5 from  './Imagens/CFTV5.jpg'
+import Carrosel from './Carroussel'
 import Menu from "./Menu"
+import { useNavigate} from 'react-router-dom'
+import car1 from "./Imagens/Carr1.jpg"
+import car2 from "./Imagens/Carr2.jpg"
+import car3 from "./Imagens/Carr3.jpg"
+import car4 from "./Imagens/Carr4.jpg"
+import car5 from "./Imagens/Carr5.jpg"
+import car6 from "./Imagens/Carr6.jpg"
+import React, { useEffect,useState } from 'react'
 function Principal(){
-   const data = [
-      {Nome:'Cameras de monitoramento predial',img :cftv1,Texto:'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.'},
-      {Nome:'Cameras Internas',img:cftv2,Texto:'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.'},
-      {Nome:'Cercas eletrificadas',img:cftv4,Texto:'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.'},
-      {Nome:'Manutenções em instalações',img:cftv5,Texto:'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.'},
-      {Nome:'Porteiro Eletronico',img:cftv5,Texto:'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.'},
-   ]
+    var Carros =[car1,car2,car3,car4,car5,car6]
    return(
-    <div className="geral">
-    <Menu />
-    <div className="App">
-          
-           <h1>Itens No Carrinho
-             {data.map((item)=>(
-            <div className="container"><h3 className="titulo">{item.Nome}</h3>
-             <img className="img" alt={item.Nome} src={item.img}></img>
-             <p className="texto">{item.Texto}</p>
-            </div>
-             ))}
-           </h1>
-      </div>
-
-    </div>
       
+     <div className="geral">
+      <Menu/>      
+     
+      <Carrosel imagens={Carros}  />
+     
+      
+      <div className="App">
+     
+         <div className="container">
+            <h2>Sistemas Distribuidos</h2>
+         </div>
+         
+      </div>
+     </div>  
    )
 }
 

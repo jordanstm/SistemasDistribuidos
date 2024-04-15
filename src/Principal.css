@@ -9,6 +9,7 @@
   }
   .geral{
     margin-top: 0;
+    background-color: #282c34;
   }
   .container{
      display: flex;
@@ -20,11 +21,7 @@
     margin-bottom: 5px;
     
   }
-  .img{
-    height: 25vmin;
-    width: 30%;
-  
-  }
+ 
   .titulo{
     font-size: medium;
     color: #7bf1b0;
@@ -32,6 +29,6 @@
   .texto{
     font-size:small;
   }
-   .container:hover{
-    border: solid 1px #7bf1b0;
-   }
+  .carro{
+    height: 10px !important;
+  }

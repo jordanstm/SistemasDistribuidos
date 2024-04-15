@@ -1,10 +1,9 @@
 .menu
-     {
-    min-width: 100%;
-    height: 7vw;
-    margin-top: 10;
+{   
+     display: flex;
+     min-width: 100%;
+    height: 2.6vw;
 background-color: #454c5a;
-padding: 0px;
  border-color: aliceblue solid 4px;
    
 }
@@ -12,5 +11,15 @@ a{
      color: antiquewhite;
      margin-left: 2%;
      text-decoration: none;
-
+    
+}
+.cart{
+    
+     height: 4vmin;
+    
+     border:solid 2px rgb(156, 109, 47) ;
+   
+}
+.containerCard{
+     margin-left: 78%;
 }
