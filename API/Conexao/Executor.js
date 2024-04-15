@@ -35,5 +35,8 @@ async function ExecutaSemQuery(SQL){
    }
 
    async function GravaUsuario(usuario){
-    var sql = `Insert Into Usuarios`
+    var nCodigo  = PegaCodigoMaximo('Usuario').then(d=>{return d.data})
+    var sql = `Insert Into Usuarios(Codigo,Nome,Email)`
+    sql +=` Values(${nCodigo},'${usuario.nome}','${usuario.email}')`
+    ExecutaSemQuery(sql);
    }
