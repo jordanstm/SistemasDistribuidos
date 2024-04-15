@@ -1,4 +1,4 @@
-import Conector from './Conector'
+const Conector  = require('./Conector') 
 
 
 const GravarLog=async(log)=>{
@@ -38,5 +38,7 @@ async function ExecutaSemQuery(SQL){
     var nCodigo  = PegaCodigoMaximo('Usuario').then(d=>{return d.data})
     var sql = `Insert Into Usuarios(Codigo,Nome,Email)`
     sql +=` Values(${nCodigo},'${usuario.nome}','${usuario.email}')`
-    ExecutaSemQuery(sql);
+    return ExecutaSemQuery(sql).then(d=>{d.data});
    }
+
+   module.exports={GravaUsuario}
