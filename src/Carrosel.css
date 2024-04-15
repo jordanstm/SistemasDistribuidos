@@ -1,0 +1,9 @@
+.carrosel{
+    
+    display: flex;
+   
+    border-radius: 30px;
+}
+img{
+    height:  50vmin;
+}

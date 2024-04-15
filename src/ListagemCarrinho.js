@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import cftv1 from  './Imagens/CFTV2.jpg'
 import cftv2 from  './Imagens/CFTV3.jpg'
 import cftv4 from  './Imagens/CFTV4.jpg'
