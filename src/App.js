@@ -42,7 +42,7 @@ function App() {
             <p>Senha</p>
             <input className='senha' type='password' onChange={(e)=>{SetSenha(e.target.value);SetErro(false)}}></input>
            <button className='btnLogar' onClick={()=>{ Realizalogin(usuario,senha)}}>Logar</button>
-           <buton className='logingoogle'>Logar com conta google</buton>
+           <button className='logingoogle'>Logar com conta google</button>
            <p>ou Cadastre-se <button>Aqui</button></p>
            { Validou && (<Navigate to='/Principal' />) }
            {Erro  &&(Menssageiro("Ops,Usuario ou Senha Invalido."))}
