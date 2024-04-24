@@ -1,18 +1,17 @@
 require('dotenv').config();
 const knex = require('knex')({
     client: "mssql",
+  
     connection: {
       host : process.env.HOSTDB,
-      user : process.env.USERDB,
-      password : process.env.PWDDB,
+      user:"sa",
+      password:"123",
       database : process.env.DATABASE,
     
-      port: Number(process.env.PORTDB),
+        port: Number(process.env.PORTDB),
       "options": {
-        "encrypt": false,
-        "enableArithAbort": true,
-        "requestTimeout":40000,
-        "connectTimeout":40000
+        trustedConnection: true,
+        instanceName:"SQLEXPRESS"
         }
     }
   });

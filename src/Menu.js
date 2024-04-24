@@ -2,6 +2,7 @@ import './menu.css'
 import shop from './Imagens/shopCart.png'
 import { useNavigate,Navigate} from 'react-router-dom'
 import { useEffect,useState } from 'react';
+
 function Menu({total}){
 
    

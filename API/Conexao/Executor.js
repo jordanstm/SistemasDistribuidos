@@ -19,13 +19,7 @@ async function ExecutaSemQuery(SQL){
 
    /* Crudes preparação do banco de dados*/
 
-   async function TestaSeBdExiste(){
-    var sql =`Select Name from Sys.databases`
-    let nomes = ExecutaSemQuery(sql).then(d=>{return d.data})
-     if(!process.env.DATABASE.match(nomes)){
-          await CriarBanco();
-     }
-   }
+  
    async function CriarBanco(){
     var sql = `Create database ´Teste´`
     await ExecutaSemQuery(sql);
@@ -33,7 +27,7 @@ async function ExecutaSemQuery(SQL){
    }
    
    async function CriaTabelaUsuario(Usuario){
-    var sql  = `Create table Usuario(Codigo identity(1,1),Nome char(50),Emailchar (50))`
+    var sql  = `Create table Usuario(Codigo identity(1,1),Nome char(50),Emailchar (50),Senha char(50))`
     await ExecutaSemQuery(sql).catch(err=>console.log("Deu erro e foi",err))
    }
 
@@ -50,9 +44,16 @@ async function ExecutaSemQuery(SQL){
     await TestaSeBdExiste().catch(ex=>{console.log("Erro ocorrido no teste da existencia da Base:",ex)});//Tratameno de erro para ajudara localizar as causas
 
     var nCodigo  = PegaCodigoMaximo('Usuario').then(d=>{return d.data})
-    var sql = `Insert Into Usuarios(Codigo,Nome,Email)`
-    sql +=` Values(${nCodigo},'${usuario.nome}','${usuario.email}')`
+    var sql = `Insert Into Usuarios(Codigo,Nome,Email,Senha)`
+    sql +=` Values(${nCodigo},'${usuario.Nome}','${usuario.Email}','${usuario.Senha}')`
     return ExecutaSemQuery(sql).then(d=>{d.data});
    }
-
+   async function TestaSeBdExiste(){
+    var sql =`Select Name from Sys.databases`
+    let nomes = await ExecutaSemQuery(sql)
+    .then(d=>{return d.data})
+     if(!process.env.DATABASE.match(nomes)){
+          await CriarBanco();
+     }
+   }
    module.exports={GravaUsuario}
