@@ -9,9 +9,14 @@ function App() {
   const[senha,SetSenha] = useState();
   const[Validou,SetValidou]= useState(false);
   const [Erro,SetErro]=useState(false);
+  const [Cadastrar,SetCadastrar]= useState(false)
+
 
  
-  
+  function AtualizaEstadoCadastro( valor)
+  {
+    SetCadastrar(valor);
+  }
   function Realizalogin(usuario, senha){
      //Função para testar o Login
     if(usuario === 'Caio' && senha ==='123'){
@@ -43,9 +48,12 @@ function App() {
             <input className='senha' type='password' onChange={(e)=>{SetSenha(e.target.value);SetErro(false)}}></input>
            <button className='btnLogar' onClick={()=>{ Realizalogin(usuario,senha)}}>Logar</button>
            <button className='logingoogle'>Logar com conta google</button>
-           <p>ou Cadastre-se <button>Aqui</button></p>
+           <p>ou Cadastre-se <button onClick={()=>{
+            Cadastrar===true?AtualizaEstadoCadastro(false):AtualizaEstadoCadastro(true)
+           }}>Aqui</button></p>
            { Validou && (<Navigate to='/Principal' />) }
            {Erro  &&(Menssageiro("Ops,Usuario ou Senha Invalido."))}
+           {Cadastrar && <Navigate to='CadastroUsuario'/>}
         </div>
       </header>
     </div>

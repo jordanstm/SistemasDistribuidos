@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Principal from './Principal'
 import DetalheItem from './DetalheItem'
 import ListagemCarrinho from './ListagemCarrinho'
+import Cadastrousuario from './Cadastrousuario';
+
 import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +18,7 @@ root.render(
         <Route path='/Principal' element={<Principal />} />
         <Route path='/DetalheItem' element={<DetalheItem/>}/>
         <Route path='/ListarCarrinho' element={<ListagemCarrinho/>}/>
+        <Route path='/CadastroUsuario' element={<Cadastrousuario/>}/>
       </Routes>
     
 
